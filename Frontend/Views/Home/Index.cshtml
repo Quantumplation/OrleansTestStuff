@@ -1,0 +1,25 @@
+﻿@model Frontend.Models.GameListViewModel
+@{
+    ViewBag.Title = "Home Page";
+}
+<html>
+<head>
+    <title>Test</title>
+</head>
+<body>
+<div class="row">
+    @foreach (var game in Model.Games)
+    {
+        <h3>@game.Name</h3>
+        <ul>
+            @foreach (var player in game.Players)
+            {
+                <li>
+                    @player
+                </li>
+            }
+        </ul>
+    }
+</div>
+</body>
+</html>
